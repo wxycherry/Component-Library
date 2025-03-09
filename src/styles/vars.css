@@ -1,0 +1,96 @@
+:root {
+  /* colord */
+  --hs-color-white: #ffffff;
+  --hs-color-black: #000000;
+  --hs-color-primary: #409eff;
+  --hs-color-primary-light-3: rgb(121.3, 187.1, 255);
+  --hs-color-primary-light-5: rgb(159.5, 206.5, 255);
+  --hs-color-primary-light-7: rgb(197.7, 225.9, 255);
+  --hs-color-primary-light-8: rgb(216.8, 235.6, 255);
+  --hs-color-primary-light-9: rgb(235.9, 245.3, 255);
+  --hs-color-primary-dark-2: rgb(51.2, 126.4, 204);
+  --hs-color-success: #67c23a;
+  --hs-color-success-light-3: rgb(148.6, 212.3, 117.1);
+  --hs-color-success-light-5: rgb(179, 224.5, 156.5);
+  --hs-color-success-light-7: rgb(209.4, 236.7, 195.9);
+  --hs-color-success-light-8: rgb(224.6, 242.8, 215.6);
+  --hs-color-success-light-9: rgb(239.8, 248.9, 235.3);
+  --hs-color-success-dark-2: rgb(82.4, 155.2, 46.4);
+  --hs-color-warning: #e6a23c;
+  --hs-color-warning-light-3: rgb(237.5, 189.9, 118.5);
+  --hs-color-warning-light-5: rgb(242.5, 208.5, 157.5);
+  --hs-color-warning-light-7: rgb(247.5, 227.1, 196.5);
+  --hs-color-warning-light-8: rgb(250, 236.4, 216);
+  --hs-color-warning-light-9: rgb(252.5, 245.7, 235.5);
+  --hs-color-warning-dark-2: rgb(184, 129.6, 48);
+  --hs-color-danger: #f56c6c;
+  --hs-color-danger-light-3: rgb(248, 152.1, 152.1);
+  --hs-color-danger-light-5: rgb(250, 181.5, 181.5);
+  --hs-color-danger-light-7: rgb(252, 210.9, 210.9);
+  --hs-color-danger-light-8: rgb(253, 225.6, 225.6);
+  --hs-color-danger-light-9: rgb(254, 240.3, 240.3);
+  --hs-color-danger-dark-2: rgb(196, 86.4, 86.4);
+  --hs-color-error: #f56c6c;
+  --hs-color-error-light-3: rgb(248, 152.1, 152.1);
+  --hs-color-error-light-5: rgb(250, 181.5, 181.5);
+  --hs-color-error-light-7: rgb(252, 210.9, 210.9);
+  --hs-color-error-light-8: rgb(253, 225.6, 225.6);
+  --hs-color-error-light-9: rgb(254, 240.3, 240.3);
+  --hs-color-error-dark-2: rgb(196, 86.4, 86.4);
+  --hs-color-info: #909399;
+  --hs-color-info-light-3: rgb(177.3, 179.4, 183.6);
+  --hs-color-info-light-5: rgb(199.5, 201, 204);
+  --hs-color-info-light-7: rgb(221.7, 222.6, 224.4);
+  --hs-color-info-light-8: rgb(232.8, 233.4, 234.6);
+  --hs-color-info-light-9: rgb(243.9, 244.2, 244.8);
+  --hs-color-info-dark-2: rgb(115.2, 117.6, 122.4);
+
+  /* 中性色 */
+  --hs-bg-color: #ffffff;
+  --hs-bg-color-page: #f2f3f5;
+  --hs-bg-color-overlay: #ffffff;
+  --hs-text-color-primary: #303133;
+  --hs-text-color-regular: #606266;
+  --hs-text-color-secondary: #909399;
+  --hs-text-color-placeholder: #a8abb2;
+  --hs-text-color-disabled: #c0c4cc;
+  --hs-border-color: #dcdfe6;
+  --hs-border-color-light: #e4e7ed;
+  --hs-border-color-lighter: #ebeef5;
+  --hs-border-color-extra-light: #f2f6fc;
+  --hs-border-color-dark: #d4d7de;
+  --hs-border-color-darker: #cdd0d6;
+  --hs-fill-color: #f0f2f5;
+  --hs-fill-color-light: #f5f7fa;
+  --hs-fill-color-lighter: #fafafa;
+  --hs-fill-color-extra-light: #fafcff;
+  --hs-fill-color-dark: #ebedf0;
+  --hs-fill-color-darker: #e6e8eb;
+  --hs-fill-color-blank: #ffffff;
+
+  /* border */
+  --hs-border-width: 1px;
+  --hs-border-style: solid;
+  --hs-border-color-hover: var(--hs-text-color-disabled);
+  --hs-border: var(--hs-border-width) var(--hs-border-style) var(--hs-border-color);
+  --hs-border-radius-base: 4px;
+  --hs-border-radius-small: 2px;
+  --hs-border-radius-round: 20px;
+  --hs-border-radius-circle: 100%;
+
+  /* font */
+  --hs-font-size-extra-large: 20px;
+  --hs-font-size-large: 18px;
+  --hs-font-size-medium: 16px;
+  --hs-font-size-base: 14px;
+  --hs-font-size-small: 13px;
+  --hs-font-size-extra-small: 12px;
+  --hs-font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  --hs-font-weight-primary: 500;
+  --hs-font-line-height-primary: 24px;
+
+  /* disable */
+  --hs-disabled-bg-color: var(--hs-fill-color-light);
+  --hs-disabled-text-color: var(--hs-text-color-placeholder);
+  --hs-disabled-border-color: var(--hs-border-color-light);
+}
