@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref,onMounted } from 'vue';
 import Button from './components/Button/Button.vue';
+import Collapse from './components/Collapse/Collapse.vue';
+import Item from './components/Collapse/CollapseItem.vue';
 import type {ButtonInstance } from './components/Button/types';
+const openedValue = ref(['a'])
 const buttonRef = ref<ButtonInstance | null>(null)
 onMounted(()=>{
   if(buttonRef.value){
@@ -37,6 +40,22 @@ onMounted(()=>{
   <a href="#">the link</a>
   <hr/>
 
+  <Collapse v-model="openedValue" accordion>
+    <Item name="a">
+      <template #title>
+        <h1>title1</h1>
+      </template>
+      <h1>headline title</h1>
+      <div>this is content a aaa</div>
+    </Item>
+    <Item name="b" title="title2">
+      <div>this is bbbbb test</div>
+    </Item>
+    <Item name="c" title="title3" disabled>
+      <div>this is cccc test</div>
+    </Item>
+  </Collapse>
+  {{ openedValue }}
 </template>
 
 <style scoped>
