@@ -3,6 +3,7 @@ import { ref,onMounted } from 'vue';
 import Button from './components/Button/Button.vue';
 import Collapse from './components/Collapse/Collapse.vue';
 import Item from './components/Collapse/CollapseItem.vue';
+import Icon from './components/Icon/Icon.vue';
 import type {ButtonInstance } from './components/Button/types';
 const openedValue = ref(['a'])
 const buttonRef = ref<ButtonInstance | null>(null)
@@ -16,6 +17,7 @@ onMounted(()=>{
 
 <template>
   <div>
+    <Icon icon="arrow-up" size="2xl" type="danger"/>
     <Button ref="buttonRef">Test Button</Button>
     <Button plain>Plain Button</Button>
     <Button round>Round Button</Button>
@@ -33,6 +35,8 @@ onMounted(()=>{
     <Button type="danger" plain>Danger</Button><br/><br/>
     <Button size="large">size</Button>
     <Button size="small" >small</Button><br/><br/>
+    <Button size="large" loading>Loading</Button>
+    <Button size="large" icon="arrow-up">Icon</Button><br/>
   </div>
   <h1>helloworld</h1>
   <h2>helloworld</h2>

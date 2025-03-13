@@ -87,7 +87,9 @@
   background-color: var(--hs-button-disabled-bg-color);
   border-color: var(--hs-button-disabled-border-color);
 }
-
+[class*="hs-icon"] + span {
+  margin-left: 6px;
+}
 .hs-button--primary {
   --hs-button-text-color: var(--hs-color-white);
   --hs-button-bg-color: var(--hs-color-primary);

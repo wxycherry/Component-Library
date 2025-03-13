@@ -13,6 +13,8 @@ export interface ButtonProps {
   disabled?: boolean;
   nativeType?: NativeType;
   autofocus?: boolean;
+  icon?: string;
+  loading?: boolean;
 }
 
 // 创建一个类型来描述实例究竟是什么样的

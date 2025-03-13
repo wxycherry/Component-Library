@@ -93,4 +93,8 @@
   --hs-disabled-bg-color: var(--hs-fill-color-light);
   --hs-disabled-text-color: var(--hs-text-color-placeholder);
   --hs-disabled-border-color: var(--hs-border-color-light);
+
+  /* animation */
+  --hs-transition-duration: .3s;
+  --hs-transition-duration-fast: .2s;
 }

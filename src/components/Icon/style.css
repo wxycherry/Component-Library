@@ -1,0 +1,29 @@
+.hs-icon {
+  --hs-icon-color: inherit;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--hs-icon-color);
+  font-size: inherit;
+}
+.hs-icon--primary {
+  --hs-icon-color: var(--hs-color-primary);
+}
+
+.hs-icon--info {
+  --hs-icon-color: var(--hs-color-info);
+}
+
+.hs-icon--success {
+  --hs-icon-color: var(--hs-color-success);
+}
+
+.hs-icon--warning {
+  --hs-icon-color: var(--hs-color-warning);
+}
+
+.hs-icon--danger {
+  --hs-icon-color: var(--hs-color-danger);
+}
