@@ -1,0 +1,79 @@
+.hs-message {
+  --hs-message-bg-color: var(--hs-color-info-light-9);
+  --hs-message-border-color: var(--hs-border-color-lighter);
+  --hs-message-padding: 15px 19px;
+  --hs-message-close-size: 16px;
+  --hs-message-close-icon-color: var(--hs-text-color-placeholder);
+  --hs-message-close-hover-color: var(--hs-text-color-secondary);
+}
+.hs-message {
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
+  border-radius: var(--hs-border-radius-base);
+  border-width: var(--hs-border-width);
+  border-style: var(--hs-border-style);
+  border-color: var(--hs-message-border-color);
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  background-color: var(--hs-message-bg-color);
+  padding: var(--hs-message-padding);
+  display: flex;
+  align-items: center;
+  transition: top var(--hs-transition-duration),opacity var(--hs-transition-duration),transform var(--hs-transition-duration);
+  .hs-message__content {
+    color: var(--hs-message-text-color);
+    overflow-wrap: anywhere;
+  }
+
+  &.is-close .hs-message__content {
+    padding-right: 30px;
+  }
+
+  .hs-message__close {
+    display: flex;
+    align-items: center;
+  }
+
+  .hs-message__close svg {
+    cursor: pointer;
+  }
+}
+
+.hs-message--info {
+  --hs-message-bg-color: var(--hs-color-info-light-9);
+  --hs-message-border-color: var(--hs-color-info-light-8);
+  --hs-message-text-color: var(--hs-color-info);
+}
+
+.hs-message--success {
+  --hs-message-bg-color: var(--hs-color-success-light-9);
+  --hs-message-border-color: var(--hs-color-success-light-8);
+  --hs-message-text-color: var(--hs-color-success);
+}
+
+.hs-message--warning {
+  --hs-message-bg-color: var(--hs-color-warning-light-9);
+  --hs-message-border-color: var(--hs-color-warning-light-8);
+  --hs-message-text-color: var(--hs-color-warning);
+}
+
+.hs-message--danger {
+  --hs-message-bg-color: var(--hs-color-danger-light-9);
+  --hs-message-border-color: var(--hs-color-danger-light-8);
+  --hs-message-text-color: var(--hs-color-danger);
+}
+
+/* 定义关闭按钮的图标颜色 */
+.hs-message__close {
+  --hs-icon-color: var(--hs-color-info); /* 这里需要根据状态来设置颜色 */
+}
+
+.hs-message.fade-up-enter-from,
+.hs-message.fade-up-leave-to {
+  opacity: 0;
+  transform: translate(-50%,-100%);
+}
+
