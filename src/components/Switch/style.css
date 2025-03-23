@@ -1,0 +1,81 @@
+.hs-switch {
+  --hs-switch-on-color: var(--hs-color-primary);
+  --hs-switch-off-color: var(--hs-border-color);
+  --hs-switch-on-border-color: var(--hs-color-primary);
+  --hs-switch-off-border-color: var(--hs-border-color);
+}
+.hs-switch {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  height: 32px;
+  /* border: 1px solid #efefef; */
+  .hs-switch__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    &:focus-visible {
+      & ~ .hs-switch__core {
+        outline: 2px solid var(--hs-switch-on-color);
+        outline-offset: 1px;
+      }
+    }
+  }
+  &.is-checked {
+    .hs-switch__core {
+      border-color: var(--hs-switch-on-border-color);
+      background-color: var(--hs-switch-on-color);
+      .hs-switch__core-action {
+        left: calc(100%-17px);
+      }
+      .vk-switch__core-inner {
+        padding: 0 18px 0 4px;
+      }
+    }
+  }
+}
+.hs-switch__core {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  height: 20px;
+  min-width: 40px;
+  border: 1px solid var(--hs-switch-off-border-color);
+  outline: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: var(--hs-switch-off-color);
+  cursor: pointer;
+  transition: border-color var(--hs-transition-duration),
+    background-color var(--hs-transition-duration);
+  .hs-switch__core-action {
+    position: absolute;
+    left: 1px;
+    border-radius: var(--hs-border-radius-circle);
+    width: 16px;
+    height: 16px;
+    background-color: var(--hs-color-white);
+    transition: all var(--hs-transition-duration);
+  }
+  .hs-switch__core-inner {
+    width: 100%;
+    transition: all var(--hs-transition-duration);
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 4px 0 18px;
+    .hs-switch__core-inner-text {
+      font-size: 12px;
+      color: var(--hs-color-white);
+      user-select: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
