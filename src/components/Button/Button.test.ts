@@ -48,6 +48,7 @@ describe('Button.vue', () => {
       slots:{
         default:'icon'
       },
+      // 填写任何想摸你掉的组件的名称
       global:{
         stubs:['FontAwesomeIcon']
       }

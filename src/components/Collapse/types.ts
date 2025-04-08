@@ -6,13 +6,13 @@ export interface CollapseProps {
   // 手风琴效果
   accordion?:boolean;
 }
-
+// 子组件上的属性
 export interface CollapseItemProps {
   name: NameType;
   title?:string;
   disabled?:boolean;
 }
-
+// 父组件上的属性
 export interface CollapseContext {
   activeNames:Ref<NameType[]>;
   handleItemClick: (name: NameType) => void;

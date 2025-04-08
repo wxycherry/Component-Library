@@ -4,14 +4,15 @@
     v-on = 'outerevents'
     ref="popperContainerNode"
   >
+  <!-- 触发器 -->
     <div
       class="hs-tooltip__trigger"
       ref="triggerNode"
       v-on = 'events'
     >
-
       <slot></slot>
     </div>
+    <!-- 展示区 -->
     <Transition :name="transition">
       <div
         v-if="isOpen"

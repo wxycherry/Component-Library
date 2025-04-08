@@ -75,7 +75,7 @@
      <!-- textarea -->
      <template v-else>
        <textarea
-         ref="nputRef"
+         ref="inputRef"
          class="hs-textarea__wrapper"
          v-bind="attrs"
          :disabled="disabled"

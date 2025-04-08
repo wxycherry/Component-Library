@@ -32,7 +32,7 @@
 <script setup lang="ts">
 import {ref,computed,onMounted,watch} from 'vue'
 import type { SwitchProps, SwitchEmits } from './types';
-import { aC } from 'vitest/dist/chunks/reporters.66aFHiyX.js';
+// import { aC } from 'vitest/dist/chunks/reporters.66aFHiyX.js';
 defineOptions({
   name: 'HsSwitch',
   inheritAttrs: false
@@ -45,6 +45,7 @@ const emits = defineEmits<SwitchEmits>();
 
 const innerValue = ref(props.modelValue)
 const input = ref<HTMLInputElement>()
+// 现在是否被选中
 const checked = computed(()=>innerValue.value===props.activeValue)
 const switchValue = ()=>{
   if(props.disabled) return

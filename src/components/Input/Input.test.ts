@@ -52,7 +52,9 @@ describe('Input', () => {
     // 更新值
     //注意setValue是组合事件会触发input以及change
     await input.setValue('update')
+    // modelvalue是否更新
     expect(wrapper.props('modelValue')).toBe('update');
+    // dom元素的值是否更新
     expect(input.element.value).toBe('update');
     console.log(wrapper.emitted())
     expect(wrapper.emitted()).toHaveProperty('input')

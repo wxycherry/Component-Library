@@ -24,7 +24,6 @@
             <slot></slot>
           </div>
        </div>
-
     </Transition>
   </div>
 </template>
@@ -38,7 +37,9 @@ defineOptions({
 })
 const props = defineProps<CollapseItemProps>()
 const collapseContext = inject(CollapseContextKey)
+// 检查是否包含对应的内容
 const isActive = computed(()=>collapseContext?.activeNames.value.includes(props.name))
+// 判断disabled的情况
 const handleClick = ()=>{
   if(props.disabled) {return }
   collapseContext?.handleItemClick(props.name)
@@ -68,6 +69,3 @@ const transitionEvents:Record<string,(el:HTMLElement)=>void> = {
   }
 };
 </script>
-<style>
-
-</style>

@@ -47,9 +47,11 @@ export const createMessage = (props:CreateMessageProps)=>{
   return instance
 }
 
+// 拿到数组中最后一项
 export const getLastInstance = ()=>{
   return instances.at(-1)
 }
+// 返回上一个组件的bottomoffset的值
 export const getLastBottomOffset = (id:string)=>{
   const idx = instances.findIndex(instance=>instance.id===id)
   if(idx<=0){
